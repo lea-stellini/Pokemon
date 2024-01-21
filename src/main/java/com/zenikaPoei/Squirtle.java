@@ -1,6 +1,8 @@
 package com.zenikaPoei;
 
-public class Squirtle extends Pokemon{
+import java.util.Random;
+
+public class Squirtle extends Pokemon implements Water{
     public final static int POKEDEX_INDEX = 7;
 
     public Squirtle (){
@@ -17,5 +19,26 @@ public class Squirtle extends Pokemon{
 
     public void surf(){
         System.out.println("Squirtle se met à nager !");
+    }
+
+    @Override
+    public ElementTypes getType() {
+        return ElementTypes.WATER;
+    }
+
+    @Override
+    public boolean isStrongerAgainstType(ElementTypes type) {
+        return type == ElementTypes.FIRE;
+    }
+
+    @Override
+    public int specialAttack() {
+        return waterGun();
+    }
+
+    @Override
+    public int waterGun() {
+        Random random = new Random();
+        return random.nextInt(10, 20);
     }
 }

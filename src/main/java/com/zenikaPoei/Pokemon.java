@@ -2,7 +2,7 @@ package com.zenikaPoei;
 
 import java.util.Random;
 
-public abstract class Pokemon {
+public abstract class Pokemon implements ElementType {
     private final static int PV_NUMBER_CALCUL = 5;
     private int level;
     private int pv;
