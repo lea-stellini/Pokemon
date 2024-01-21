@@ -15,17 +15,8 @@ public class Arena {
         int pokemon2Pv = pokemon2.getPv();
 
         while(pokemon1Pv > 0 && pokemon2Pv > 0){
-            if(pokemon1.isStrongerAgainstType(pokemon2.getType())){
-                pokemon2Pv -= pokemon1.specialAttack();
-            }else{
-                pokemon2Pv -= pokemon1.attack();
-            }
-
-            if(pokemon2.isStrongerAgainstType(pokemon1.getType())){
-                pokemon1Pv -= pokemon2.specialAttack();
-            }else{
-                pokemon1Pv -= pokemon2.attack();
-            }
+            pokemon2Pv -= getAttack(pokemon1, pokemon2);
+            pokemon1Pv -= getAttack(pokemon2, pokemon1);
         }
 
         if(pokemon1Pv > 0){
@@ -35,5 +26,11 @@ public class Arena {
         }else{
             System.out.println("Et c'est un match nul !");
         }
+    }
+
+    public int getAttack(Pokemon pokemon1, Pokemon pokemon2){
+        return pokemon1.isStrongerAgainstType(pokemon2.getType()) ?
+                pokemon1.specialAttack() :
+                pokemon1.attack();
     }
 }
