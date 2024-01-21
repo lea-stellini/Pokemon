@@ -1,15 +1,13 @@
 package com.zenikaPoei;
 
-import java.util.Random;
-
-public class Bulbasaur extends Pokemon{
+public class Squirtle extends Pokemon{
     public final static int POKEDEX_INDEX = 1;
 
-    public Bulbasaur (){
+    public Squirtle (){
         this(1);
     }
 
-    public Bulbasaur(int level) {
+    public Squirtle(int level) {
         super(level);
     }
 }
