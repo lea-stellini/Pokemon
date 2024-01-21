@@ -39,6 +39,8 @@ public class Squirtle extends Pokemon implements Water{
     @Override
     public int waterGun() {
         Random random = new Random();
-        return random.nextInt(10, 20);
+        int attackPower = random.nextInt(10, 20);
+        System.out.printf("%s utilise sont attaque spéciale waterGun avec une intensité de %s%n", this.getClass().getSimpleName(), attackPower);
+        return attackPower;
     }
 }

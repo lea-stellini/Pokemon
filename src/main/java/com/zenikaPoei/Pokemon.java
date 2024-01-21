@@ -37,9 +37,9 @@ public abstract class Pokemon implements ElementType {
         int attackPower = random.nextInt(10);
 
         if(attackPower == 0){
-            System.out.println("Pokemon a raté son attaque...");
+            System.out.printf("%s a raté son attaque...%n", this.getClass().getSimpleName());
         } else {
-            System.out.printf("Pokemon attaque avec une intensité de %s%n", attackPower);
+            System.out.printf("%s attaque avec une intensité de %s%n", this.getClass().getSimpleName(), attackPower);
         }
 
         return attackPower;

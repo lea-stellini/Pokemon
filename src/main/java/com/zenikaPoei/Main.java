@@ -4,21 +4,12 @@ package com.zenikaPoei;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Pokemon bulle = new Bulbasaur(10);
-        Squirtle squirtle = new Squirtle();
+        Pokemon bulle = new Bulbasaur(50);
+        Pokemon squirtle = new Squirtle(48);
         Pokemon charmander = new Charmander(50);
 
-        bulle.attack();
-        System.out.println(bulle.toString());
-        bulle.shout();
+        Arena blueArena = new Arena(bulle, charmander);
 
-        squirtle.attack();
-        System.out.println(squirtle.toString());
-        squirtle.shout();
-        squirtle.surf();
-
-        charmander.attack();
-        System.out.println(charmander.toString());
-        charmander.shout();
+        blueArena.duel();
     }
 }
