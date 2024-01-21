@@ -4,7 +4,7 @@ package com.zenikaPoei;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Bulbasaur bulle = new Bulbasaur(10);
+        Pokemon bulle = new Bulbasaur(10);
 
         bulle.attack();
         System.out.println(bulle.toString());
