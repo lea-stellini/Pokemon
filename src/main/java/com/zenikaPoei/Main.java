@@ -5,15 +5,20 @@ package com.zenikaPoei;
 public class Main {
     public static void main(String[] args) {
         Pokemon bulle = new Bulbasaur(10);
-        Pokemon squirtle = new Squirtle();
+        Squirtle squirtle = new Squirtle();
         Pokemon charmander = new Charmander(50);
 
         bulle.attack();
         System.out.println(bulle.toString());
+        bulle.shout();
+
         squirtle.attack();
         System.out.println(squirtle.toString());
+        squirtle.shout();
+        squirtle.surf();
+
         charmander.attack();
         System.out.println(charmander.toString());
-
+        charmander.shout();
     }
 }

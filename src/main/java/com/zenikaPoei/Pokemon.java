@@ -16,6 +16,22 @@ public abstract class Pokemon {
         this.pv = level * PV_NUMBER_CALCUL;
     }
 
+    public int getLevel() {
+        return level;
+    }
+
+    private void setLevel(int level) {
+        this.level = level;
+    }
+
+    public int getPv() {
+        return pv;
+    }
+
+    private void setPv(int pv) {
+        this.pv = pv;
+    }
+
     public int attack(){
         Random random = new Random();
         int attackPower = random.nextInt(10);
@@ -29,8 +45,10 @@ public abstract class Pokemon {
         return attackPower;
     }
 
+    public abstract void shout();
+
     @Override
     public String toString() {
-        return String.format("%s de niveau %s a %sPV.", this.getClass().getSimpleName(), this.level, this.pv);
+        return String.format("%s de niveau %s a %sPV.", this.getClass().getSimpleName(), this.getLevel(), this.getPv());
     }
 }

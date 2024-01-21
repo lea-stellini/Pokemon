@@ -12,4 +12,8 @@ public class Bulbasaur extends Pokemon{
     public Bulbasaur(int level) {
         super(level);
     }
+
+    public void shout(){
+        System.out.println("Bulbizare !!");
+    }
 }
